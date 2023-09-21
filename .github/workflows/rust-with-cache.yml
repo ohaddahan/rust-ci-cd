@@ -1,12 +1,18 @@
 # https://ectobit.com/blog/speed-up-github-actions-rust-pipelines/
 name: Build rust with cache
 on:
-  workflow_call:
-    inputs:
-      rust-version:
-        type: string
-        required: false
-        default: nightly
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+# on:
+#   workflow_call:
+#     inputs:
+#       rust-version:
+#         type: string
+#         required: false
+#         default: nightly
 
 jobs:
   check:
