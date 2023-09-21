@@ -1,4 +1,7 @@
-docker-files/
 Dockerfile
-scripts/
-target/
+scripts
+target
+.github
+.idea
+.dockerignore
+.gitignore
