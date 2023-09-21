@@ -1,4 +1,5 @@
 # https://ectobit.com/blog/speed-up-github-actions-rust-pipelines/
+name: Build rust with cache
 on:
   workflow_call:
     inputs:
