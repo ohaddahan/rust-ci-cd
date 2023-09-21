@@ -1,5 +1,5 @@
 # https://github.com/marketplace/actions/rust-release-binary
-name: Build
+name: Build and publish binary artifact
 
 on:
   push:
