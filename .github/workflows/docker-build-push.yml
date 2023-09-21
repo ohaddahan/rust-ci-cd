@@ -1,5 +1,5 @@
 # https://ectobit.com/blog/speed-up-github-actions-rust-pipelines/
-
+name: docker-build-push
 on:
   workflow_call:
     inputs:
