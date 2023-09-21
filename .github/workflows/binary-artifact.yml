@@ -19,5 +19,7 @@ jobs:
         with:
           name: Binary
           path: |
+            target/release/member1
+            target/release/member2
             ${{ steps.compile.outputs.BUILT_ARCHIVE }}
             ${{ steps.compile.outputs.BUILT_CHECKSUM }}
