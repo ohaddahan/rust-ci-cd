@@ -1,36 +1,41 @@
 # https://ectobit.com/blog/speed-up-github-actions-rust-pipelines/
 name: docker-build-push
 on:
-  workflow_call:
-    inputs:
-      image:
-        type: string
-        required: true
-      platforms:
-        type: string
-        required: false
-        default: linux/amd64,linux/arm64
-      vendor:
-        type: string
-        required: false
-        default: ohaddahan
-      hadolint-dockerfile:
-        type: string
-        required: false
-        default: Dockerfile
-      hadolint-ignore:
-        type: string
-        required: false
-        default: ''
-      build-args:
-        type: string
-        required: false
-        default: ''
-    secrets:
-      container-registry-username:
-        required: true
-      container-registry-password:
-        required: true
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+# on:
+#   workflow_call:
+#     inputs:
+#       image:
+#         type: string
+#         required: true
+#       platforms:
+#         type: string
+#         required: false
+#         default: linux/amd64,linux/arm64
+#       vendor:
+#         type: string
+#         required: false
+#         default: ohaddahan
+#       hadolint-dockerfile:
+#         type: string
+#         required: false
+#         default: Dockerfile
+#       hadolint-ignore:
+#         type: string
+#         required: false
+#         default: ''
+#       build-args:
+#         type: string
+#         required: false
+#         default: ''
+#     secrets:
+#       container-registry-username:
+#         required: true
+#       container-registry-password:
+#         required: true
 jobs:
   build:
     runs-on: ubuntu-latest
