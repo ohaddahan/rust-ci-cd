@@ -10,3 +10,4 @@
 5. https://github.com/marketplace/actions/rust-release-binary
 6. https://stackoverflow.com/questions/64634535/github-actions-cache-rust-artifacts
 7. https://github.com/marketplace/actions/rust-release-binary
+8. https://peterprototypes.com/blog/rust-dockerfile-boilerplate/
